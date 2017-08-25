@@ -1,19 +1,20 @@
-# Chef Generic Webhook
-Whether you have five or five thousand servers, Chef lets you manage them all by turning infrastructure into code. Infrastructure described as code is flexible, versionable, human-readable, and testable. This specific integration provides details on integrating with Chef Automate. 
+# Vistara.io
+The Vistara IT Management Cloud provides all the tools, dashboards and insights you need to actually serve the business and manage a dynamic and distributed IT supply chain. It starts with the IT Operations Hub.  The Vistara IT Operations Hub is the presentation layer that centralizes discovery, monitoring, troubleshooting, maintenance, compliance and reporting, in one place.
 
 # Pre-Requisites
-* Chef Automate v 3.x or higher.  The Generic Webhook is new functionality.  See the following Chef documentation for instructions on how to configure the Notifier settings in the delivery.rb file of the Chef Automate server.  [delivery.rb Chef Help Docs](http://chef-web-docs-notify.s3-website-us-west-2.amazonaws.com/config_rb_delivery.html#notifier-settings)
-* Chef Automate Generic Webhook configured.  
+* Vistara.io  
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
-* xMatters ChefAutomateGenericWebhook Communication Plan (see zip file in above files) imported into xMatters or created in xMatters.
+* xMatters Vistara Communication Plan (see zip file in above files) imported into xMatters or created in xMatters.
 
 # Files
-* [Chef-Generic-Webhook_IB.js](Chef-Generic-Webhook_IB.js) - The javascript file to be pasted into a Inbound Integration Builder. It takes the payload from Chef and formats the content to match the xMatters Form requirements and creates an xMatters Event. 
-* [ChefAutomateGenericWebhook.zip](ChefAutomateGenericWebhook.zip) - The comm plan that has all the cool scripts and email format and such. 
+* [Vistara Inbound.js](Vistara Inbound.js) - The javascript file to be pasted into a Inbound Integration Builder. It takes the payload from Vistara and formats the content to match the xMatters Form requirements and creates an xMatters Event. 
+* [Vistara.zip](Vistara.zip) - The comm plan that has all the cool scripts and email format and such. 
+* [Vistara Outbound Delivery.js](Vistara Outbound Delivery.js) - The javascript file to be pasted into a Inbound Integration Builder. It takes the payload from Vistara and formats the content to match the xMatters Form requirements and creates an xMatters Event.
+* [Vistara Outbound Response.js](Vistara Outbound Response.js) - The javascript file to be pasted into a Inbound Integration Builder. It takes the payload from Vistara and formats the content to match the xMatters Form requirements and creates an xMatters Event.
 
 # Installation
 
-## Chef Automate Server
+## Vistara
 1. Edit the delivery.rb file on the Chef Automate Server.  See the following instructions to configure the Notifier Settings. [delivery.rb](http://chef-web-docs-notify.s3-website-us-west-2.amazonaws.com/config_rb_delivery.html#notifier-settings).
 2. The attached delivery.rb file is an example of the configured settings pointing to a xMatters instance.  The following lines in the delivery.rb file are what send the information from Chef Automate to xMatters during an error.
       ``` 
